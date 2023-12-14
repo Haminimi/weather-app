@@ -204,3 +204,11 @@ export default async function displayWeatherData(city) {
 }
 
 setInterval(updateLocalTime, 1000);
+
+dialogCloseButton.addEventListener('click', () => {
+	dialog.style.animationName = 'close-dialog-animation';
+	setTimeout(() => {
+		dialog.style.display = 'none';
+		dialog.close();
+	}, 800);
+});
