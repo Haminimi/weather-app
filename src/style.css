@@ -46,3 +46,26 @@ h6 {
 #__next {
 	isolation: isolate;
 }
+
+:root {
+	font-size: 18px;
+	--theme-color: #408ec6;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	color: white;
+	background: url('https://images.unsplash.com/photo-1628521495179-ca4448a584d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
