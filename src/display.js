@@ -107,4 +107,12 @@ export default async function displayWeatherData(city) {
 	const data = await Promise.resolve(extract);
 	const extractAccuWeatherData = createAccuWeatherDataObject(city);
 	const accuWeatherData = await Promise.resolve(extractAccuWeatherData);
+
+	if (data === null || accuWeatherData === null) {
+		dialog.style.animationName = 'open-dialog-animation';
+		dialog.showModal();
+		dialog.style.display = 'flex';
+		displayWeatherData('London');
+	} else {
+	}
 }
