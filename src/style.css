@@ -386,3 +386,54 @@ form {
 #third-day-min {
 	color: gainsboro;
 }
+
+dialog {
+	background-color: rgba(100, 149, 237, 1);
+	height: 40%;
+	width: 30%;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	gap: 10px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 20px;
+	overflow: hidden;
+	text-align: justify;
+	animation: open-dialog-animation 0.8s ease-in-out forwards;
+}
+
+#dialog-close-button {
+	border-radius: 5px;
+	background-color: rgba(16, 24, 32, 0.85);
+	border: none;
+	cursor: pointer;
+	color: white;
+	padding: 0px 10px;
+	font-size: 1.1rem;
+}
+
+#dialog-close-button:hover {
+	background-color: rgba(16, 24, 32, 1);
+}
+
+@keyframes open-dialog-animation {
+	0% {
+		transform: translate(-500%, -50%) rotate(-90deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+}
+
+@keyframes close-dialog-animation {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(500%, -50%) rotate(90deg);
+	}
+}
