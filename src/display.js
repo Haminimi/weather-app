@@ -101,3 +101,10 @@ export function updateLocalTime() {
 		lastMinute = currentMinute;
 	}
 }
+
+export default async function displayWeatherData(city) {
+	const extract = createDataObject(city);
+	const data = await Promise.resolve(extract);
+	const extractAccuWeatherData = createAccuWeatherDataObject(city);
+	const accuWeatherData = await Promise.resolve(extractAccuWeatherData);
+}
