@@ -86,3 +86,98 @@ async function getAccuWeatherData(city) {
 		console.error(`Failed to fetch data from AccuWeatherAPI. ${error}`);
 	}
 }
+
+export async function createAccuWeatherDataObject(city) {
+	try {
+		const data = await Promise.resolve(getAccuWeatherData(city));
+
+		const accuWeatherObject = {};
+
+		accuWeatherObject.timeZone = data.cityData[0].TimeZone.Name;
+
+		//Forecast for today and current conditions
+		accuWeatherObject.todayDate = data.forecastData.DailyForecasts[0].Date;
+		accuWeatherObject.currentWeatherIcon =
+			data.currentWeatherData[0].WeatherIcon;
+		accuWeatherObject.todayIconPhrase =
+			data.forecastData.DailyForecasts[0].Day.IconPhrase;
+		accuWeatherObject.todayShortPhrase =
+			data.forecastData.DailyForecasts[0].Day.ShortPhrase;
+		accuWeatherObject.todayLongPhrase =
+			data.forecastData.DailyForecasts[0].Day.LongPhrase;
+		accuWeatherObject.todayAirQuality =
+			data.forecastData.DailyForecasts[0].AirAndPollen[0].Category;
+		accuWeatherObject.currentUvIndex =
+			data.currentWeatherData[0].UVIndexText;
+		accuWeatherObject.currentConditions =
+			data.currentWeatherData[0].WeatherText;
+
+		//Forecast
+		//First day data
+		accuWeatherObject.firstDayDate =
+			data.forecastData.DailyForecasts[1].Date;
+		accuWeatherObject.firstDayIcon =
+			data.forecastData.DailyForecasts[1].Day.Icon;
+		accuWeatherObject.firstDayMinTempC =
+			data.forecastData.DailyForecasts[1].Temperature.Minimum.Value;
+		accuWeatherObject.firstDayMaxTempC =
+			data.forecastData.DailyForecasts[1].Temperature.Maximum.Value;
+		accuWeatherObject.firstDayChanceOfRain =
+			data.forecastData.DailyForecasts[1].Day.PrecipitationProbability;
+		accuWeatherObject.firstDayWindKmh =
+			data.forecastData.DailyForecasts[1].Day.Wind.Speed.Value;
+		accuWeatherObject.firstDayAirQuality =
+			data.forecastData.DailyForecasts[1].AirAndPollen[0].Category;
+		accuWeatherObject.firstDayIconPhrase =
+			data.forecastData.DailyForecasts[1].Day.IconPhrase;
+		accuWeatherObject.firstDayShortPhrase =
+			data.forecastData.DailyForecasts[1].Day.ShortPhrase;
+
+		//Second day data
+		accuWeatherObject.secondDayDate =
+			data.forecastData.DailyForecasts[2].Date;
+		accuWeatherObject.secondDayIcon =
+			data.forecastData.DailyForecasts[2].Day.Icon;
+		accuWeatherObject.secondDayMinTempC =
+			data.forecastData.DailyForecasts[2].Temperature.Minimum.Value;
+		accuWeatherObject.secondDayMaxTempC =
+			data.forecastData.DailyForecasts[2].Temperature.Maximum.Value;
+		accuWeatherObject.secondDayChanceOfRain =
+			data.forecastData.DailyForecasts[2].Day.PrecipitationProbability;
+		accuWeatherObject.secondDayWindKmh =
+			data.forecastData.DailyForecasts[2].Day.Wind.Speed.Value;
+		accuWeatherObject.secondDayAirQuality =
+			data.forecastData.DailyForecasts[2].AirAndPollen[0].Category;
+		accuWeatherObject.secondDayIconPhrase =
+			data.forecastData.DailyForecasts[2].Day.IconPhrase;
+		accuWeatherObject.secondDayShortPhrase =
+			data.forecastData.DailyForecasts[2].Day.ShortPhrase;
+
+		//Third day data
+		accuWeatherObject.thirdDayDate =
+			data.forecastData.DailyForecasts[3].Date;
+		accuWeatherObject.thirdDayIcon =
+			data.forecastData.DailyForecasts[3].Day.Icon;
+		accuWeatherObject.thirdDayMinTempC =
+			data.forecastData.DailyForecasts[3].Temperature.Minimum.Value;
+		accuWeatherObject.thirdDayMaxTempC =
+			data.forecastData.DailyForecasts[3].Temperature.Maximum.Value;
+		accuWeatherObject.thirdDayChanceOfRain =
+			data.forecastData.DailyForecasts[3].Day.PrecipitationProbability;
+		accuWeatherObject.thirdDayWindKmh =
+			data.forecastData.DailyForecasts[3].Day.Wind.Speed.Value;
+		accuWeatherObject.thirdDayAirQuality =
+			data.forecastData.DailyForecasts[3].AirAndPollen[0].Category;
+		accuWeatherObject.thirdDayIconPhrase =
+			data.forecastData.DailyForecasts[3].Day.IconPhrase;
+		accuWeatherObject.thirdDayShortPhrase =
+			data.forecastData.DailyForecasts[3].Day.ShortPhrase;
+
+		return accuWeatherObject;
+	} catch (error) {
+		console.log(
+			`Failed to get data from getAccuWeatherData function. ${error}`
+		);
+		return null;
+	}
+}
