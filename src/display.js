@@ -183,5 +183,22 @@ export default async function displayWeatherData(city) {
 		secondDayChanceOfRain.innerHTML = `Chance of rain: <span class="weather-value">${accuWeatherData.secondDayChanceOfRain}%</span> `;
 		secondDayWind.innerHTML = `Wind: <span class="weather-value">${accuWeatherData.secondDayWindKmh} km/h</span> `;
 		secondDayAirQuality.innerHTML = `Air quality: <span class="weather-value">${accuWeatherData.secondDayAirQuality}</span> `;
+
+		//Third day
+		thirdDayDate.textContent = formatDate(accuWeatherData.thirdDayDate);
+		thirdDayDescription.textContent = `${accuWeatherData.thirdDayIconPhrase}`;
+		const thirdDayIconCode = `${accuWeatherData.thirdDayIcon}`;
+		const paddedthirdDayIconCode = thirdDayIconCode.padStart(2, '0');
+		const thirdDayIconLink = `https://developer.accuweather.com/sites/default/files/${paddedthirdDayIconCode}-s.png`;
+		thirdDayIcon.src = thirdDayIconLink;
+		thirdDayMinTemp.textContent = `${Math.floor(
+			accuWeatherData.thirdDayMinTempC
+		)}`;
+		thirdDayMaxTemp.textContent = `${Math.ceil(
+			accuWeatherData.thirdDayMaxTempC
+		)}`;
+		thirdDayChanceOfRain.innerHTML = `Chance of rain: <span class="weather-value">${accuWeatherData.thirdDayChanceOfRain}%</span> `;
+		thirdDayWind.innerHTML = `Wind: <span class="weather-value">${accuWeatherData.thirdDayWindKmh} km/h</span> `;
+		thirdDayAirQuality.innerHTML = `Air quality: <span class="weather-value">${accuWeatherData.thirdDayAirQuality}</span> `;
 	}
 }
