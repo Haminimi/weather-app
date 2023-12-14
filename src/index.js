@@ -52,3 +52,37 @@ export default async function createDataObject(city) {
 		return null;
 	}
 }
+
+//AccuWeatherAPI
+async function getAccuWeatherData(city) {
+	try {
+		const cityDataResponse = await fetch(
+			`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=fA2RszmJkC0x4zPgSzDVDQ5HfNOxwPzu&q=${city}&details=true&alias=always`,
+			{
+				mode: 'cors',
+			}
+		);
+		const cityData = await cityDataResponse.json();
+		const locationKey = cityData[0].Key;
+
+		const forecastResponse = await fetch(
+			`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=fA2RszmJkC0x4zPgSzDVDQ5HfNOxwPzu&details=true&metric=true`,
+			{
+				mode: 'cors',
+			}
+		);
+		const forecastData = await forecastResponse.json();
+
+		const currentWeatherResponse = await fetch(
+			`http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=fA2RszmJkC0x4zPgSzDVDQ5HfNOxwPzu&details=true`,
+			{
+				mode: 'cors',
+			}
+		);
+		const currentWeatherData = await currentWeatherResponse.json();
+
+		return { cityData, forecastData, currentWeatherData };
+	} catch (error) {
+		console.error(`Failed to fetch data from AccuWeatherAPI. ${error}`);
+	}
+}
