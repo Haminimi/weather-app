@@ -153,3 +153,129 @@ form {
 .fa-github:hover {
 	color: white;
 }
+
+#current-weather {
+	grid-column: 1 / 4;
+	grid-row: 2 / 3;
+	padding: 0px 20px;
+	display: flex;
+	gap: 20px;
+}
+
+#current-weather-left-part {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	height: 100%;
+	gap: 20px;
+}
+
+#city {
+	display: flex;
+	justify-content: center;
+	font-size: 2.3rem;
+	line-height: 80px;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(16, 24, 32, 1);
+}
+
+#today-data {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	color: gainsboro;
+	padding: 15px;
+	height: 100%;
+	line-height: 33px;
+	background-color: rgba(16, 24, 32, 0.8);
+	border: 5px solid rgba(16, 24, 32, 1);
+	border-radius: 5px;
+}
+
+#today-data > #today-data-content {
+	display: flex;
+	gap: 30px;
+}
+
+#current-weather > #current-weather-card {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 20px 30px;
+	border-radius: 10px;
+	transition: transform 0.1s linear;
+	background-color: rgba(16, 24, 32, 0.8);
+	border: 6px solid rgba(16, 24, 32, 1);
+	justify-content: space-between;
+	width: 40%;
+}
+
+#current-weather-card-header {
+	display: flex;
+	height: 40%;
+}
+
+#current-weather-card-header > #left-part-of-header {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+#today-date,
+#current-time {
+	font-size: 1.15rem;
+}
+
+#current-weather-description {
+	font-size: 1.4rem;
+	color: white;
+	line-height: 33px;
+	font-weight: bold;
+}
+
+#current-weather-card-header > #right-part-of-header {
+	display: flex;
+	justify-content: flex-end;
+	margin-left: auto;
+	width: 40%;
+}
+
+#current-temp {
+	font-size: 3.4rem;
+	font-weight: bold;
+	line-height: 50px;
+}
+
+#current-weather > #current-weather-card > #current-weather-card-content {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 60%;
+}
+
+#current-weather-card-content {
+	height: 60%;
+}
+
+#current-weather-icon-and-temp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 85%;
+	width: 20%;
+	gap: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: var(--theme-color);
+}
+
+#today-temperature-interval {
+	font-size: 1.4rem;
+	display: flex;
+	gap: 15px;
+}
