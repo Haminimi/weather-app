@@ -38,9 +38,11 @@ In the past few lessons at [The Odin Project](https://www.theodinproject.com/das
 **Stickers and Icons**
 - Icon used for the favicon image is one of the [Weather icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/weather).
 - Stickers used in the header are [Cloudy stickers created by bukeicon - Flaticon](https://www.flaticon.com/free-stickers/cloudy).
+
 **Background Images**
 - Photo by [Daniele Colucci](https://unsplash.com/@daniele71043?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/green-grass-field-under-blue-sky-during-daytime-dSBsCzzlqTU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
 - Photo by [Matthieu Joannon](https://unsplash.com/@matt_j?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/photography-of-stars-sgIfSl30YbE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash). 
+
 **APIs**
 - [Weather API](https://www.weatherapi.com/)
 - [AccuWeather API](https://developer.accuweather.com/)
