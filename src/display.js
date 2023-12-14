@@ -62,3 +62,42 @@ const thirdDayChanceOfRain = document.getElementById(
 );
 const thirdDayWind = document.getElementById('third-day-wind');
 const thirdDayAirQuality = document.getElementById('third-day-air-quality');
+
+//Time and date formatting
+let timeZone;
+function formatDate(string) {
+	const date = new Date(string);
+	const options = { weekday: 'long' };
+	const weekDay = date.toLocaleDateString('en-us', options);
+	const day = date.getDate().toString().padStart(2, '0');
+	const month = (date.getMonth() + 1).toString().padStart(2, '0');
+	const year = date.getFullYear();
+	const formattedDate = `${weekDay}, ${day}/${month}/${year}`;
+	return formattedDate;
+}
+
+export function displayLocalTime(zone) {
+	const date = new Date();
+	const timeZone = zone;
+
+	const options = {
+		timeZone,
+		hour: 'numeric',
+		minute: 'numeric',
+		hour12: true,
+	};
+
+	const localTime = new Intl.DateTimeFormat('en-us', options).format(date);
+	currentTime.textContent = localTime;
+}
+
+let lastMinute = -1;
+
+export function updateLocalTime() {
+	const currentMinute = new Date().getUTCMinutes();
+
+	if (currentMinute !== lastMinute) {
+		displayLocalTime(timeZone);
+		lastMinute = currentMinute;
+	}
+}
