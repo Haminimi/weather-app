@@ -1,3 +1,25 @@
+import './style.css';
+import displayWeatherData from './display';
+
+const search = document.getElementById('search');
+const searchButton = document.getElementById('submit');
+
+window.addEventListener('load', () => {
+	displayWeatherData('London');
+});
+
+search.addEventListener('keydown', (event) => {
+	if (event.key === 'Enter') {
+		event.preventDefault();
+		displayWeatherData(search.value);
+	}
+});
+
+searchButton.addEventListener('click', (event) => {
+	event.preventDefault();
+	displayWeatherData(search.value);
+});
+
 //Weather API
 async function getWeatherData(city) {
 	try {
