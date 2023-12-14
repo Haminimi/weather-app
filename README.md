@@ -9,6 +9,7 @@ The [Weather App](https://haminimi.github.io/weather-app/) built by [me](https:/
 
 **To Do:**
 - [ ] **Save Favorite Locations**
+- [ ] **Add Imperial Units**
 ## Tech
 **The project is built with:**
 - HTML
