@@ -125,5 +125,29 @@ export default async function displayWeatherData(city) {
 
 			headerSticker.src = moon;
 		}
+
+		////Forecast for today and current conditions
+		currentCity.textContent = `${data.weatherFor}, ${data.country}`;
+		todayChanceOfRain.innerHTML = `Chance of rain: <span class="weather-value">${data.todayChanceOfRain}%</span> `;
+		currentWindSpeed.innerHTML = `Wind: <span class="weather-value">${data.currentWindKph} km/h</span> `;
+		todayAirQuality.innerHTML = `Air quality: <span class="weather-value">${accuWeatherData.todayAirQuality}</span>`;
+		todayChanceOfSnow.innerHTML = `Chance of snow: <span class="weather-value">${data.todayChanceOfSnow}%</span>`;
+		currentWindDirection.innerHTML = `Wind direction: <span class="weather-value">${data.currentWindDirection}</span>`;
+		currentHumidity.innerHTML = `Humidity: <span class="weather-value">${data.todayHumidity}%</span> `;
+		todayAverage.innerHTML = `Average temperature: <span class="weather-value">${data.todayAverageC} °C</span> `;
+		todayMoonPhase.innerHTML = `Moon phase: <span class="weather-value">${data.todayMoonPhase}</span>`;
+		todayUV.innerHTML = `UV: <span class="weather-value">${accuWeatherData.currentUvIndex}</span>`;
+
+		currentTemp.textContent = `${data.currentTempC} °C`;
+		todayDate.textContent = formatDate(new Date(accuWeatherData.todayDate));
+		displayLocalTime(accuWeatherData.timeZone);
+		timeZone = accuWeatherData.timeZone;
+		currentCondition.textContent = `${data.currentCondition}`;
+		const todayIconCode = `${accuWeatherData.currentWeatherIcon}`;
+		const paddedtodayIconCode = todayIconCode.padStart(2, '0');
+		const todayIconLink = `https://developer.accuweather.com/sites/default/files/${paddedtodayIconCode}-s.png`;
+		todayIcon.src = todayIconLink;
+		todayMin.textContent = Math.floor(data.todayMinTempC);
+		todayMax.textContent = Math.ceil(data.todayMaxTempC);
 	}
 }
