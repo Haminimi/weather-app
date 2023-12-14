@@ -2,7 +2,7 @@
 ## Description
 Find the accurate weather data for any city in the world, view current weather conditions, and have a peek at the forecast for the next three days. [The project](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) is a part of [The Odin Project](https://www.theodinproject.com/dashboard)'s curriculum. The Odin Project provides a high quality web development education maintained by an open source community.
 ## Live Preview
-The [Weather App](https://haminimi.github.io/gallery/) built by [me](https://github.com/Haminimi).
+The [Weather App](https://haminimi.github.io/weather-app/) built by [me](https://github.com/Haminimi).
 ## Main Features
 - **Current Weather and Forecast:** Find the accurate weather data for any city in the world, view current weather conditions, and have a peek at the forecast for the next three days.
 - **Responsive Design:** The app provides a consistent user experience and a user-friendly interface across various screen sizes.
