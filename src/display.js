@@ -149,5 +149,22 @@ export default async function displayWeatherData(city) {
 		todayIcon.src = todayIconLink;
 		todayMin.textContent = Math.floor(data.todayMinTempC);
 		todayMax.textContent = Math.ceil(data.todayMaxTempC);
+
+		//First day
+		firstDayDate.textContent = formatDate(accuWeatherData.firstDayDate);
+		firstDayDescription.textContent = `${accuWeatherData.firstDayIconPhrase}`;
+		const firstDayIconCode = `${accuWeatherData.firstDayIcon}`;
+		const paddedfirstDayIconCode = firstDayIconCode.padStart(2, '0');
+		const firstDayIconLink = `https://developer.accuweather.com/sites/default/files/${paddedfirstDayIconCode}-s.png`;
+		firstDayIcon.src = firstDayIconLink;
+		firstDayMinTemp.textContent = `${Math.floor(
+			accuWeatherData.firstDayMinTempC
+		)}`;
+		firstDayMaxTemp.textContent = `${Math.ceil(
+			accuWeatherData.firstDayMaxTempC
+		)}`;
+		firstDayChanceOfRain.innerHTML = `Chance of rain: <span class="weather-value">${accuWeatherData.firstDayChanceOfRain}%</span> `;
+		firstDayWind.innerHTML = `Wind: <span class="weather-value">${accuWeatherData.firstDayWindKmh} km/h</span> `;
+		firstDayAirQuality.innerHTML = `Air quality: <span class="weather-value">${accuWeatherData.firstDayAirQuality}</span> `;
 	}
 }
