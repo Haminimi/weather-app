@@ -202,3 +202,5 @@ export default async function displayWeatherData(city) {
 		thirdDayAirQuality.innerHTML = `Air quality: <span class="weather-value">${accuWeatherData.thirdDayAirQuality}</span> `;
 	}
 }
+
+setInterval(updateLocalTime, 1000);
