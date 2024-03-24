@@ -65,9 +65,9 @@ __webpack_require__.d(__webpack_exports__, {
   Z: () => (/* binding */ createDataObject)
 });
 
-;// CONCATENATED MODULE: ./src/sun.png
+;// CONCATENATED MODULE: ./src/assets/images/sun.png
 const sun_namespaceObject = __webpack_require__.p + "09f9e9d542ac0f0a0aa1.png";
-;// CONCATENATED MODULE: ./src/moon.png
+;// CONCATENATED MODULE: ./src/assets/images/moon.png
 const moon_namespaceObject = __webpack_require__.p + "e0c25eba3993c5ee2b54.png";
 ;// CONCATENATED MODULE: ./src/display.js
 
