@@ -1,8 +1,9 @@
 # Weather App ⛅
+![Screenshot of the Weather App.](/screenshot.png)
 ## Description
 Find the accurate weather data for any city in the world, view current weather conditions, and have a peek at the forecast for the next three days. [The project](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) is a part of [The Odin Project](https://www.theodinproject.com/dashboard)'s curriculum. The Odin Project provides a high quality web development education maintained by an open source community.
 ## Live Preview
-The [Weather App](https://haminimi.github.io/weather-app/) built by [me](https://github.com/Haminimi).
+The [Weather App](https://haminimi.github.io/weather-app/).
 ## Main Features
 - **Current Weather and Forecast:** Find the accurate weather data for any city in the world, view current weather conditions, and have a peek at the forecast for the next three days.
 - **Responsive Design:** The app provides a consistent user experience and a user-friendly interface across various screen sizes.
@@ -17,11 +18,9 @@ The [Weather App](https://haminimi.github.io/weather-app/) built by [me](https:/
 - Vanilla CSS
 
 **Tools**
-- Git
-- npm
-- Webpack
-- ESLint
 - Visual Studio Code
+- Git
+- Webpack
 ## Covered Topics
 **This section mentions the main topics covered during project work and prior lessons**
 - Asynchronous code
@@ -52,5 +51,4 @@ In the past few lessons at [The Odin Project](https://www.theodinproject.com/das
 - [Exercism](https://exercism.org/profiles/Haminimi)
 - [LeetCode](https://leetcode.com/Haminimi/)
 - Email: haminimi.dev@gmail.com
-- LinkedIn: A profile will be available at the time I am job ready
 ## Happy coding!
