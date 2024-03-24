@@ -1,6 +1,6 @@
 import createDataObject, { createAccuWeatherDataObject } from './index';
-import sun from './sun.png';
-import moon from './moon.png';
+import sun from './assets/images/sun.png';
+import moon from './assets/images/moon.png';
 
 const body = document.querySelector('body');
 const dialog = document.querySelector('dialog');
