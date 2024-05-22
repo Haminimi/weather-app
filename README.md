@@ -46,9 +46,4 @@ In the past few lessons at [The Odin Project](https://www.theodinproject.com/das
 **APIs**
 - [Weather API](https://www.weatherapi.com/)
 - [AccuWeather API](https://developer.accuweather.com/)
-## Author
-- [GitHub](https://github.com/Haminimi)
-- [Exercism](https://exercism.org/profiles/Haminimi)
-- [LeetCode](https://leetcode.com/Haminimi/)
-- Email: haminimi.dev@gmail.com
 ## Happy coding!
